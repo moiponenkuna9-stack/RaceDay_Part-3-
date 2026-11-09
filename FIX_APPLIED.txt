@@ -1,3 +1,0 @@
-Fixed Tests/RaceDay.Tests.csproj project reference to ..\RaceDay.Part2.API\RaceDay.Part2.csproj.
-Open RaceDay.Part2.sln; restore NuGet packages; rebuild solution.
-Build not verified: .NET SDK unavailable in this environment.
