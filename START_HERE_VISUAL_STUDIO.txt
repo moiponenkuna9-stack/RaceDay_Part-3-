@@ -1,0 +1,15 @@
+RACEDAY PART 3 - PORT CONFIGURATION FIX
+
+1. Extract this ZIP to a NEW folder (do not merge with an older copy).
+2. Open RaceDay.Part2.sln in Visual Studio 2022 with .NET 8 installed.
+3. Right-click the solution > Configure Startup Projects > Multiple startup projects.
+4. Set RaceDay.Part2 = Start, RaceDay.Web = Start, RaceDay.Tests = None.
+5. Build > Rebuild Solution, then F5.
+6. API: http://localhost:5100/swagger
+7. Website: http://localhost:5200
+
+FIX: RaceDay.Web/Properties/launchSettings.json now explicitly uses port 5200; API launchSettings uses 5100.
+
+If port conflict persists, stop debugging and close other running RaceDay processes. Confirm both startup profiles are selected. Port 5000 can still be used by another launch mode (e.g., launching a DLL directly) that ignores launchSettings.json.
+
+This remains a working draft. It has NOT been compiled or run here; .NET SDK is unavailable. Azure Blob Storage and some POE features remain unfinished. Database LocalDB setup is required.

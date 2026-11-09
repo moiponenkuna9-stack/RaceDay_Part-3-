@@ -1,0 +1,12 @@
+RACEDAY PART 2 + PART 3 COMBINED
+
+1. Extract this ZIP completely.
+2. Open RaceDay.Part2.sln (in this folder) with Visual Studio 2022 and .NET 8 SDK.
+3. In Solution Explorer, expand RaceDay.Part2: the API source code is under RaceDay.Part2.API.
+4. RaceDay.Web is the Part 3 MVC website; RaceDay.Tests is the test project.
+5. Build > Clean Solution, then Build > Rebuild Solution.
+6. Configure SQL Server in RaceDay.Part2.API/appsettings.json.
+7. Set both RaceDay.Part2 and RaceDay.Web to Start in solution startup properties, then press F5.
+8. For ports and setup details read PART3_README.md and RaceDay.Part2.API/docs/LOCAL_SETUP_FIRST.md.
+
+NOTE: This is an organized WORKING DRAFT, not a fully tested final POE. Azure integration and some rubric features remain unfinished. .NET SDK compilation was not available in the creation environment.

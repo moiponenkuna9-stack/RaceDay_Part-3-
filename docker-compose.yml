@@ -1,0 +1,14 @@
+services:
+  api:
+    build:
+      context: ./RaceDay.Part2.API
+      dockerfile: Dockerfile
+    ports: ["5100:8080"]
+    environment:
+      ConnectionStrings__RaceDayConnection: "${RACEDAY_SQL_CONNECTION:?Set RACEDAY_SQL_CONNECTION}"
+  web:
+    build: ./RaceDay.Web
+    ports: ["5200:8080"]
+    environment:
+      ApiBaseUrl: http://api:8080/
+    depends_on: [api]

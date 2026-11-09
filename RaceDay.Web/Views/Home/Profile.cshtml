@@ -1,0 +1,2 @@
+@model JsonElement
+<div class="panel narrow"><h1>My profile</h1><p>@Model.GetProperty("email").GetString() · @Model.GetProperty("role").GetString()</p><form asp-action="Profile" method="post">@foreach(var key in new[]{"firstName","lastName","phone","gender","emergencyContactName","emergencyContactPhone","address"}){<label>@key<input name="@key" value="@(Model.TryGetProperty(key,out var v)?v.ToString():"")" required="@(key=="firstName"||key=="lastName")" /></label>}<button class="btn">Save changes</button></form></div>
